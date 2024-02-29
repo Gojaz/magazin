@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   products: [],
-  isChecked: {},
+  isCheckedId: false,
 };
 
 const comparisonSlice = createSlice({
@@ -18,7 +18,12 @@ const comparisonSlice = createSlice({
       );
     },
     setIsChecked(state, action){
-      state.isChecked = action.payload;
+      const isChecked = state.isCheckedId === action.payload;
+      if (isChecked) {
+        state.isCheckedId = false; 
+      } else {
+        state.isCheckedId = action.payload;
+      }
     }
   },
 });
