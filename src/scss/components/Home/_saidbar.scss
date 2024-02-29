@@ -1,0 +1,40 @@
+.sidebar {
+  padding: 10px;
+  position: relative;
+  &::before {
+    top: 60px;
+    left: 50%;
+    width: 95%;
+    height: 2px;
+    transform: translateX(-50%);
+    position: absolute;
+    background: linear-gradient(
+        90deg,
+        var(--color-darkgreen) 0%,
+        var( --color-green) 40%,
+        var(--color-yellowgreen) 100%
+      );
+    content: "";
+  }
+
+  &__title {
+    margin: 10px;
+  }
+
+  &__wrapper{
+    margin-top: 20px;
+  }
+
+  &__item{
+    font-size: 18px;
+    transition: all 0.2s ease-in-out;
+
+    &:hover{
+      color: var( --color-green);
+    }
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 15px;
+  }
+}

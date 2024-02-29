@@ -1,0 +1,122 @@
+.cart__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+  padding-top: 20px;
+  position: relative;
+
+  &::before {
+    top: 10px;
+    left: 50%;
+    width: 100%;
+    height: 2px;
+    transform: translateX(-50%);
+    position: absolute;
+    background: linear-gradient(
+      90deg,
+      var(--color-darkgreen) 0%,
+      var( --color-green) 40%,
+      var(--color-yellowgreen) 100%
+    );
+    content: "";
+  }
+
+  &-img {
+    display: flex;
+    align-items: center;
+    width: 500px;
+  }
+
+  &-title {
+    margin-bottom: 10;
+  }
+
+  .game_img {
+    width: 120px;
+    height: 120px;
+    margin-right: 20px;
+  }
+
+
+  .button {
+    display: flex;
+    border: 2px solid var(--color-green);
+    color: rgb(192, 192, 192);
+    background-color: black;
+    border-radius: 100px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 15px;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    padding: 8px 9.5px;
+
+    
+    &:hover {
+      background-color: var(--color-green);
+      color: black;
+    }
+
+    &:active {
+      transform: translateY(1px);
+    }
+  }
+
+  .cart__item-count-minus {
+    padding: 8px 12px;
+  }
+
+  .cart__item-minus-disabled {
+    opacity: 0.5;
+    border: 2px solid rgb(192, 192, 192);
+
+    &:hover {
+      background-color: transparent;
+      color: rgb(192, 192, 192);
+    }
+
+    &:active {
+      transform: none;
+    }
+  }
+
+  &-count {
+    display: flex;
+    align-items: center;
+    width: 100px;
+
+    b {
+      margin: 0 10px;
+      font-size: 20px;
+    }
+  }
+
+  &-price {
+    width: 100px;
+  }
+  &-total {
+    width: 100px;
+  }
+
+  .button--circle {
+    transform: rotate(45deg);
+    border: 2px solid var(--color-darkgreen);
+
+    &:hover {
+      background-color: var(--color-darkgreen);
+      transform: rotate(45deg);
+      color: #fff;
+    }
+  }
+}
+
+// .cart__item-minus-disabled {
+//     opacity: 0.5;
+//     border: 2px solid rgb(192, 192, 192);
+
+//     &:hover {
+//       background-color: transparent;
+//       color: rgb(192, 192, 192);
+//     }
+//   }

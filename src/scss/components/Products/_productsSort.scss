@@ -1,0 +1,35 @@
+.products-sort {
+  position: relative;
+  &__tableau {
+    cursor: pointer;
+  }
+  &__popup {
+    position: absolute;
+    top: 5px;
+    left: 70px;
+    margin-top: 25px;
+    background: var(--color-dark);
+    box-shadow: 0px 5px 15px black;
+    border-radius: 10px;
+    overflow: hidden;
+    ul {
+      overflow: hidden;
+      li {
+        padding: 12px 15px;
+        cursor: pointer;
+        border-radius: 10px;
+        border: 1px solid var(--color-green);
+
+        &.active,
+        &:hover {
+          background: var(--color-green);
+          color: black;
+        }
+
+        &.active {
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}

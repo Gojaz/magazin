@@ -1,0 +1,39 @@
+.main_slider {
+  height: 500px;
+  max-width: 650px;
+  position: relative;
+  &__img {
+    width: 650px;
+    height: 500px;
+    border-radius: 10px;
+  }
+
+  &__wrapper {
+    position: absolute;
+    top: 150px;
+    left: 20px;
+    z-index: 100;
+    max-width: 300px;
+  }
+
+  &__title {
+    text-transform: uppercase;
+  }
+
+  &__text {
+    margin-top: 20px;
+    font-size: 30px;
+    font-weight: 700;
+  }
+
+  &__btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    transition: all 0.2s ease-out;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}

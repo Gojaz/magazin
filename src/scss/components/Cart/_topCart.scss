@@ -1,0 +1,15 @@
+.cart__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px;
+}
+.cart__title {
+  font-size: 30px;
+}
+
+.cart_clear {
+  cursor: pointer;
+}
+
+

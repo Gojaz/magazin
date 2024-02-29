@@ -1,0 +1,15 @@
+.main_top {
+  &__top {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__sidebar {
+    background-color: black;
+    border-radius: 10px;
+  }
+
+  &__main-slider {
+    background-color: var(--color-yellowgreen);
+  }
+}

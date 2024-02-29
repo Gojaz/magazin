@@ -1,0 +1,23 @@
+.characteristic{
+    margin-top: 20px;
+ 
+    &__wrapper{
+        background-color: black;
+        padding: 10px 20px;
+        border-radius: 10px;
+    }
+
+    &__table{
+        display: flex;
+    }
+
+    &__item{
+        width: 350px;
+    
+    }
+
+    &__option{
+        margin-bottom: 10px;
+        font-size: 15px;
+   }
+}

@@ -1,0 +1,92 @@
+@import './variables';
+@import "./components/all";
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800;900&display=swap");
+
+// @mixin
+
+
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+p {
+  margin: 0;
+}
+
+h3{
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  padding-left: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  background-color: var(--color-dark);
+  color: white;
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  margin: 0;
+}
+
+.container {
+  max-width: 1300px;
+  padding: 0 30px;
+  margin: 0 auto;
+}
+
+.btn{
+  border-radius: 8px;
+  border: none;
+  background-color: var(--color-green);
+  cursor: pointer;
+}
+
+.button{
+  border: 2px solid;
+  border-radius: 70px;
+  cursor: pointer;
+}
+
+.mainSlider .swiper-pagination-bullets {
+  bottom: 1.5rem;
+}
+.mainSlider .swiper-pagination-bullet,
+.productSlider .swiper-pagination-bullet {
+  background: var(--color-yellowgreen);
+}
+
+.productSlider .swiper-button-prev::after {
+  font-size: 2rem;
+}
+
+.productSlider .swiper-button-prev::after,
+.productSlider .swiper-button-next::after {
+  font-size: 2rem;
+  color: var(--color-yellowgreen);
+  padding: 2rem;
+}
+
+.active{
+  color: var( --color-green);
+}
+

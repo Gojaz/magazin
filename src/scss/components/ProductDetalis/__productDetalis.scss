@@ -1,0 +1,15 @@
+.product-details{
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+    }
+    &__title{
+        margin-bottom: 20px;
+    }
+    &__buy{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
