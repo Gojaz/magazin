@@ -20,13 +20,12 @@ const ProductItem = ({ product }) => {
 
   const dispatch = useDispatch();
   const isCheckedId = useSelector((state) => state.comparison.isCheckedId);
-  const cartItem = useSelector((state) =>
-    state.cart.item.find((obj) => obj.id === id)
-  );
-
-  // const dispatch = useDispatch(); 
+  const cartItem = useSelector((state) => state.cart.item.find((obj) => obj.id === id));
+  const checkedProducts = useSelector((state) => state.comparison.products);
   
-   const onClickAdd = () => {
+  // const dispatch = useDispatch();
+
+  const onClickAdd = () => {
     const item = {
       id,
       title,
@@ -48,7 +47,7 @@ const ProductItem = ({ product }) => {
     };
     const activeData = document.getElementById(id).checked;
 
-    dispatch( activeData ? setProducts(item) : removeProducts(id));
+    dispatch(activeData ? setProducts(item) : removeProducts(id));
   };
 
   return (
@@ -62,13 +61,13 @@ const ProductItem = ({ product }) => {
         </div>
         <div className="checkbox-input-container">
           <label className="checkbox style-c">
-            <input
-             checked={id === isCheckedId}
-             id={id}
-             onChange={(e) => handleChange(e, id)}
-             className="checkbox-input"
-             type="checkbox"
-             />
+            <input 
+              checked={checkedProducts.some(product => product.id == id )}
+              id={id}
+              onChange={(e) => handleChange(e, id)}
+              className="checkbox-input"
+              type="checkbox"
+            />
             <div className="checkbox__checkmark"></div>
             <span className="checkbox__body">Сравнить</span>
           </label>
